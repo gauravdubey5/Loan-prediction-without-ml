@@ -64,7 +64,7 @@ def edit(application_id):
         cursor.execute('UPDATE loan_applications SET name=?, age=?, income=?,loan_amount=?, credit_score=? WHERE id=?', (name, age, income, loan_amount, credit_score, application_id))
         conn.commit()
         conn.close()
-        return render_template('applications.html')
+        return redirect(url_for('applications'))
     else:
         cursor.execute('SELECT * FROM loan_applications WHERE id=?', (application_id,))
         application = cursor.fetchone()
