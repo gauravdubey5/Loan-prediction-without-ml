@@ -38,36 +38,36 @@
                             and application[2]|int >= 21
                             and application[4]|int <= (5 * application[3]|int) 
                             and application[5]|int >= 650 %}
-                            ✅ Approved
+                            Approved
                         {% else %}
-                            ❌ Rejected
+                            Rejected
                         {% endif %}
                     </td>
                     <td>
                         {% set approved = true %}
 
                         {% if application[3] < 35000 %}
-                            <p>❌ Your Income Must Be 35000 or Greater</p>
+                            <p>Your Income Must Be 35000 or Greater</p>
                             {% set approved = false %}
                         {% endif %}
 
                         {% if application[2] < 21 %}
-                            <p>❌ Your Age Must Be 21 or Greater</p>
+                            <p>Your Age Must Be 21 or Greater</p>
                             {% set approved = false %}
                         {% endif %}
 
                         {% if application[4] > (5 * application[3]) %}
-                            <p>❌ Your Loan Amount must be at most 5x your Income</p>
+                            <p>Your Loan Amount must be at most 5x your Income</p>
                             {% set approved = false %}
                         {% endif %}
 
                         {% if application[5] < 650 %}
-                            <p>❌ Your Credit Score must be 650 or Greater</p>
+                            <p>Your Credit Score must be 650 or Greater</p>
                             {% set approved = false %}
                         {% endif %}
 
                         {% if approved %}
-                            <p>✅ Your Loan Was Approved</p>
+                            <p>Your Loan Was Approved</p>
                         {% endif %}
                     </td>
 
