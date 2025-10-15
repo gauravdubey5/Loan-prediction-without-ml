@@ -38,9 +38,9 @@
                             and application[2]|int >= 21
                             and application[4]|int <= (5 * application[3]|int) 
                             and application[5]|int >= 650 %}
-                            Approved
+                            Approved 
                         {% else %}
-                            Rejected
+                            Rejected 
                         {% endif %}
                     </td>
                     <td>
@@ -67,7 +67,7 @@
                         {% endif %}
 
                         {% if approved %}
-                            <p>Your Loan Was Approved</p>
+                            <p>Meets all conditions</p>
                         {% endif %}
                     </td>
 
